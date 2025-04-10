@@ -2,14 +2,19 @@ import React,{useState} from 'react'
 
 export default function TextForm(props) {
     const handleUpClick=()=>{
-        // console.log("upper case was clcked "+text)
+        
         setText(text.toUpperCase())
-    //    console.log(count)
+   
     }
     const handleloClick=()=>{
-        // console.log("upper case was clcked "+text)
+       
         setText(text.toLowerCase())
-    //    console.log(count)
+   
+    }
+    const RemoveSpaces=()=>{
+        
+        setText(text.trim())
+    //    
     }
     const handleOnChange=(event)=>{
         // console.log("onchange clicked ")
@@ -34,6 +39,7 @@ export default function TextForm(props) {
   <hr class="border border-danger border-2 opacity-50"></hr>
   <button className="btn btn-primary my-6 " onClick={handleloClick}     type="button">convert-to-lowerCase</button>
   <hr class="border border-danger border-2 opacity-50"></hr>
+  <button className="btn btn-primary my-6 " onClick={RemoveSpaces}     type="button">RemoveSpaces</button>
 </div>
 
 <div className='container'>
